@@ -136,7 +136,8 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.DgvGrilla.Location = new System.Drawing.Point(21, 39);
+            this.DgvGrilla.GridColor = System.Drawing.SystemColors.Control;
+            this.DgvGrilla.Location = new System.Drawing.Point(22, 43);
             this.DgvGrilla.Name = "DgvGrilla";
             this.DgvGrilla.Size = new System.Drawing.Size(538, 218);
             this.DgvGrilla.TabIndex = 3;
