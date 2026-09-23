@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,9 +42,20 @@ namespace PryGestionArticulosCruz
 
         private void FrmArticulos_Load(object sender, EventArgs e)
         {
+            StreamReader archivo = new StreamReader("Archivos/RUBROS.csv");
 
+            string linea = archivo.ReadLine();
+
+            while (linea != null)
+            {
+                cmbArticulos.Items.Add(linea);
+                linea = archivo.ReadLine();
+            }
+            archivo.Close();
+
+            cmbArticulos.SelectedIndex = 1;
         }
     }
-    
-    
+
+
 }
