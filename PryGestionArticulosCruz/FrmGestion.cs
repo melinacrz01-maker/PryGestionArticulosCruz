@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PryGestionArticulosCruz
 {
-    public partial class Form1 : Form
+    public partial class FrmArticulos : Form
     {
-        public Form1()
+        public FrmArticulos()
         {
             InitializeComponent();
         }
@@ -37,6 +37,11 @@ namespace PryGestionArticulosCruz
             {
                 Application.Exit();
             }
+        }
+
+        private void FrmArticulos_Load(object sender, EventArgs e)
+        {
+
         }
     }
     
