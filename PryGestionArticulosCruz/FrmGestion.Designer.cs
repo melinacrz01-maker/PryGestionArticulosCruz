@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArticulos));
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbltotalarchivo = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblcantArticulo = new System.Windows.Forms.Label();
             this.lblcantidadarticulos = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvGrilla = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,22 +49,22 @@
             this.btnExportar = new System.Windows.Forms.Button();
             this.linkTrabajoEvaluativo = new System.Windows.Forms.LinkLabel();
             this.grpDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDatos
             // 
-            this.grpDatos.BackColor = System.Drawing.Color.Navy;
+            this.grpDatos.BackColor = System.Drawing.Color.FloralWhite;
             this.grpDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.grpDatos.Controls.Add(this.label1);
+            this.grpDatos.Controls.Add(this.lbltotalarchivo);
             this.grpDatos.Controls.Add(this.lblTotal);
             this.grpDatos.Controls.Add(this.lblcantArticulo);
             this.grpDatos.Controls.Add(this.lblcantidadarticulos);
             this.grpDatos.Controls.Add(this.lblCantidad);
-            this.grpDatos.Controls.Add(this.dataGridView1);
+            this.grpDatos.Controls.Add(this.DgvGrilla);
             this.grpDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.grpDatos.ForeColor = System.Drawing.Color.Navy;
             this.grpDatos.Location = new System.Drawing.Point(25, 106);
             this.grpDatos.Name = "grpDatos";
             this.grpDatos.Size = new System.Drawing.Size(582, 330);
@@ -73,23 +73,23 @@
             this.grpDatos.Text = "Articulos";
             this.grpDatos.Enter += new System.EventHandler(this.grpDatos_Enter);
             // 
-            // label1
+            // lbltotalarchivo
             // 
-            this.label1.AllowDrop = true;
-            this.label1.BackColor = System.Drawing.Color.Lavender;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Location = new System.Drawing.Point(396, 277);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 27);
-            this.label1.TabIndex = 7;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.UseWaitCursor = true;
+            this.lbltotalarchivo.AllowDrop = true;
+            this.lbltotalarchivo.BackColor = System.Drawing.Color.White;
+            this.lbltotalarchivo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lbltotalarchivo.Location = new System.Drawing.Point(396, 277);
+            this.lbltotalarchivo.Name = "lbltotalarchivo";
+            this.lbltotalarchivo.Size = new System.Drawing.Size(163, 27);
+            this.lbltotalarchivo.TabIndex = 7;
+            this.lbltotalarchivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbltotalarchivo.UseWaitCursor = true;
             // 
             // lblTotal
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lblTotal.ForeColor = System.Drawing.Color.Navy;
             this.lblTotal.Location = new System.Drawing.Point(347, 283);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(43, 16);
@@ -99,7 +99,7 @@
             // lblcantArticulo
             // 
             this.lblcantArticulo.AllowDrop = true;
-            this.lblcantArticulo.BackColor = System.Drawing.Color.Lavender;
+            this.lblcantArticulo.BackColor = System.Drawing.Color.White;
             this.lblcantArticulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lblcantArticulo.Location = new System.Drawing.Point(179, 277);
             this.lblcantArticulo.Name = "lblcantArticulo";
@@ -120,26 +120,26 @@
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.lblCantidad.ForeColor = System.Drawing.Color.Navy;
             this.lblCantidad.Location = new System.Drawing.Point(18, 283);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(155, 16);
             this.lblCantidad.TabIndex = 3;
             this.lblCantidad.Text = "Cantidad de Articulos";
             // 
-            // dataGridView1
+            // DgvGrilla
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 39);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(538, 218);
-            this.dataGridView1.TabIndex = 3;
+            this.DgvGrilla.Location = new System.Drawing.Point(21, 39);
+            this.DgvGrilla.Name = "DgvGrilla";
+            this.DgvGrilla.Size = new System.Drawing.Size(538, 218);
+            this.DgvGrilla.TabIndex = 3;
             // 
             // Column1
             // 
@@ -190,7 +190,7 @@
             // 
             this.btnMostrar.BackColor = System.Drawing.Color.Navy;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnMostrar.ForeColor = System.Drawing.Color.Linen;
             this.btnMostrar.Location = new System.Drawing.Point(304, 49);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(147, 41);
@@ -200,7 +200,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FloralWhite;
+            this.menuStrip1.BackColor = System.Drawing.Color.Navy;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -221,9 +221,9 @@
             // 
             // btnExportar
             // 
-            this.btnExportar.BackColor = System.Drawing.Color.Navy;
+            this.btnExportar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnExportar.ForeColor = System.Drawing.Color.Navy;
             this.btnExportar.Location = new System.Drawing.Point(469, 49);
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(139, 41);
@@ -245,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Linen;
+            this.BackColor = System.Drawing.Color.Snow;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(632, 470);
             this.Controls.Add(this.linkTrabajoEvaluativo);
@@ -262,7 +262,7 @@
             this.Load += new System.EventHandler(this.FrmArticulos_Load);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -275,7 +275,7 @@
         private System.Windows.Forms.ComboBox cmbArticulos;
         private System.Windows.Forms.Label lblRubro;
         private System.Windows.Forms.GroupBox grpDatos;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvGrilla;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblcantidadarticulos;
         private System.Windows.Forms.Label lblcantArticulo;
@@ -285,7 +285,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbltotalarchivo;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
