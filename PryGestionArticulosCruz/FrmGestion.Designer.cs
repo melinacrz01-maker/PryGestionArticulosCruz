@@ -191,7 +191,7 @@
             this.btnMostrar.BackColor = System.Drawing.Color.Navy;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.Color.Linen;
-            this.btnMostrar.Location = new System.Drawing.Point(304, 49);
+            this.btnMostrar.Location = new System.Drawing.Point(296, 52);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(147, 41);
             this.btnMostrar.TabIndex = 6;
@@ -224,11 +224,11 @@
             this.btnExportar.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportar.ForeColor = System.Drawing.Color.Navy;
-            this.btnExportar.Location = new System.Drawing.Point(469, 49);
+            this.btnExportar.Location = new System.Drawing.Point(449, 52);
             this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(139, 41);
+            this.btnExportar.Size = new System.Drawing.Size(158, 41);
             this.btnExportar.TabIndex = 8;
-            this.btnExportar.Text = "Exportar Archivo";
+            this.btnExportar.Text = "Exportar Archivo csv +";
             this.btnExportar.UseVisualStyleBackColor = false;
             // 
             // linkTrabajoEvaluativo
