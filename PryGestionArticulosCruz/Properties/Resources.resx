@@ -118,13 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ciberseguridad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ciberseguridad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="galweb-banner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\galweb-banner.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pngtree-online-marketing-and-business-growth-in-a-blue-backdrop-3d-render-image_3693014" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pngtree-online-marketing-and-business-growth-in-a-blue-backdrop-3d-render-image_3693014.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ciberseguridad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ciberseguridad.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ciberseguridad1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ciberseguridad1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

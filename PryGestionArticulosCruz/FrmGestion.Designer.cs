@@ -30,26 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArticulos));
             this.grpDatos = new System.Windows.Forms.GroupBox();
-            this.lbltotalarchivo = new System.Windows.Forms.Label();
+            this.lblTotalStock = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
-            this.lblcantArticulo = new System.Windows.Forms.Label();
+            this.lblCantArticulos = new System.Windows.Forms.Label();
             this.lblcantidadarticulos = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.DgvGrilla = new System.Windows.Forms.DataGridView();
+            this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblRubro = new System.Windows.Forms.Label();
-            this.cmbArticulos = new System.Windows.Forms.ComboBox();
+            this.cmbRubros = new System.Windows.Forms.ComboBox();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExportar = new System.Windows.Forms.Button();
             this.linkTrabajoEvaluativo = new System.Windows.Forms.LinkLabel();
             this.grpDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,12 +57,12 @@
             // 
             this.grpDatos.BackColor = System.Drawing.Color.FloralWhite;
             this.grpDatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.grpDatos.Controls.Add(this.lbltotalarchivo);
+            this.grpDatos.Controls.Add(this.lblTotalStock);
             this.grpDatos.Controls.Add(this.lblTotal);
-            this.grpDatos.Controls.Add(this.lblcantArticulo);
+            this.grpDatos.Controls.Add(this.lblCantArticulos);
             this.grpDatos.Controls.Add(this.lblcantidadarticulos);
             this.grpDatos.Controls.Add(this.lblCantidad);
-            this.grpDatos.Controls.Add(this.DgvGrilla);
+            this.grpDatos.Controls.Add(this.dgvGrilla);
             this.grpDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatos.ForeColor = System.Drawing.Color.Navy;
             this.grpDatos.Location = new System.Drawing.Point(25, 106);
@@ -73,17 +73,17 @@
             this.grpDatos.Text = "Articulos";
             this.grpDatos.Enter += new System.EventHandler(this.grpDatos_Enter);
             // 
-            // lbltotalarchivo
+            // lblTotalStock
             // 
-            this.lbltotalarchivo.AllowDrop = true;
-            this.lbltotalarchivo.BackColor = System.Drawing.Color.White;
-            this.lbltotalarchivo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lbltotalarchivo.Location = new System.Drawing.Point(396, 277);
-            this.lbltotalarchivo.Name = "lbltotalarchivo";
-            this.lbltotalarchivo.Size = new System.Drawing.Size(163, 27);
-            this.lbltotalarchivo.TabIndex = 7;
-            this.lbltotalarchivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbltotalarchivo.UseWaitCursor = true;
+            this.lblTotalStock.AllowDrop = true;
+            this.lblTotalStock.BackColor = System.Drawing.Color.White;
+            this.lblTotalStock.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblTotalStock.Location = new System.Drawing.Point(396, 277);
+            this.lblTotalStock.Name = "lblTotalStock";
+            this.lblTotalStock.Size = new System.Drawing.Size(163, 27);
+            this.lblTotalStock.TabIndex = 7;
+            this.lblTotalStock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTotalStock.UseWaitCursor = true;
             // 
             // lblTotal
             // 
@@ -96,17 +96,17 @@
             this.lblTotal.TabIndex = 6;
             this.lblTotal.Text = "Total";
             // 
-            // lblcantArticulo
+            // lblCantArticulos
             // 
-            this.lblcantArticulo.AllowDrop = true;
-            this.lblcantArticulo.BackColor = System.Drawing.Color.White;
-            this.lblcantArticulo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lblcantArticulo.Location = new System.Drawing.Point(179, 277);
-            this.lblcantArticulo.Name = "lblcantArticulo";
-            this.lblcantArticulo.Size = new System.Drawing.Size(136, 27);
-            this.lblcantArticulo.TabIndex = 5;
-            this.lblcantArticulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblcantArticulo.UseWaitCursor = true;
+            this.lblCantArticulos.AllowDrop = true;
+            this.lblCantArticulos.BackColor = System.Drawing.Color.White;
+            this.lblCantArticulos.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lblCantArticulos.Location = new System.Drawing.Point(179, 277);
+            this.lblCantArticulos.Name = "lblCantArticulos";
+            this.lblCantArticulos.Size = new System.Drawing.Size(136, 27);
+            this.lblCantArticulos.TabIndex = 5;
+            this.lblCantArticulos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCantArticulos.UseWaitCursor = true;
             // 
             // lblcantidadarticulos
             // 
@@ -127,45 +127,52 @@
             this.lblCantidad.TabIndex = 3;
             this.lblCantidad.Text = "Cantidad de Articulos";
             // 
-            // DgvGrilla
+            // dgvGrilla
             // 
-            this.DgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvGrilla.AllowUserToAddRows = false;
+            this.dgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGrilla.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.DgvGrilla.GridColor = System.Drawing.SystemColors.AppWorkspace;
-            this.DgvGrilla.Location = new System.Drawing.Point(22, 43);
-            this.DgvGrilla.Name = "DgvGrilla";
-            this.DgvGrilla.Size = new System.Drawing.Size(538, 218);
-            this.DgvGrilla.TabIndex = 3;
+            this.dgvGrilla.GridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvGrilla.Location = new System.Drawing.Point(22, 43);
+            this.dgvGrilla.Name = "dgvGrilla";
+            this.dgvGrilla.ReadOnly = true;
+            this.dgvGrilla.Size = new System.Drawing.Size(538, 218);
+            this.dgvGrilla.TabIndex = 3;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Código";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Descripción";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Costo";
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Stock";
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "Valor en Stock";
             this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // lblRubro
             // 
@@ -179,13 +186,13 @@
             this.lblRubro.TabIndex = 1;
             this.lblRubro.Text = "Rubro";
             // 
-            // cmbArticulos
+            // cmbRubros
             // 
-            this.cmbArticulos.FormattingEnabled = true;
-            this.cmbArticulos.Location = new System.Drawing.Point(114, 61);
-            this.cmbArticulos.Name = "cmbArticulos";
-            this.cmbArticulos.Size = new System.Drawing.Size(163, 21);
-            this.cmbArticulos.TabIndex = 0;
+            this.cmbRubros.FormattingEnabled = true;
+            this.cmbRubros.Location = new System.Drawing.Point(114, 61);
+            this.cmbRubros.Name = "cmbRubros";
+            this.cmbRubros.Size = new System.Drawing.Size(163, 21);
+            this.cmbRubros.TabIndex = 0;
             // 
             // btnMostrar
             // 
@@ -198,6 +205,7 @@
             this.btnMostrar.TabIndex = 6;
             this.btnMostrar.Text = "Mostrar Articulos";
             this.btnMostrar.UseVisualStyleBackColor = false;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // menuStrip1
             // 
@@ -229,8 +237,9 @@
             this.btnExportar.Name = "btnExportar";
             this.btnExportar.Size = new System.Drawing.Size(158, 41);
             this.btnExportar.TabIndex = 8;
-            this.btnExportar.Text = "Exportar Archivo csv +";
+            this.btnExportar.Text = "Exportar Archivo csv ";
             this.btnExportar.UseVisualStyleBackColor = false;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // linkTrabajoEvaluativo
             // 
@@ -241,6 +250,7 @@
             this.linkTrabajoEvaluativo.TabIndex = 9;
             this.linkTrabajoEvaluativo.TabStop = true;
             this.linkTrabajoEvaluativo.Text = "linkTrabajoEvaluativo";
+            this.linkTrabajoEvaluativo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkTrabajoEvaluativo_LinkClicked);
             // 
             // FrmArticulos
             // 
@@ -254,7 +264,7 @@
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.grpDatos);
             this.Controls.Add(this.lblRubro);
-            this.Controls.Add(this.cmbArticulos);
+            this.Controls.Add(this.cmbRubros);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -263,7 +273,7 @@
             this.Load += new System.EventHandler(this.FrmArticulos_Load);
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -273,20 +283,20 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox cmbArticulos;
+        private System.Windows.Forms.ComboBox cmbRubros;
         private System.Windows.Forms.Label lblRubro;
         private System.Windows.Forms.GroupBox grpDatos;
-        private System.Windows.Forms.DataGridView DgvGrilla;
+        private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblcantidadarticulos;
-        private System.Windows.Forms.Label lblcantArticulo;
+        private System.Windows.Forms.Label lblCantArticulos;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Label lbltotalarchivo;
+        private System.Windows.Forms.Label lblTotalStock;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;

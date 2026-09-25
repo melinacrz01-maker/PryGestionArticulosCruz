@@ -42,18 +42,46 @@ namespace PryGestionArticulosCruz
 
         private void FrmArticulos_Load(object sender, EventArgs e)
         {
-            StreamReader archivo = new StreamReader("Archivos/RUBROS.csv");
+            Clsarchivo archivo = new Clsarchivo();
+            archivo.CargarRubros(cmbRubros);
 
-            string linea = archivo.ReadLine();
+            cmbRubros.SelectedIndex = 0;
+        }
 
-            while (linea != null)
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            Clsarchivo archivo = new Clsarchivo();
+            archivo.CargarArticulos(dgvGrilla, cmbRubros.Text);
+
+            lblCantArticulos.Text = archivo.Cantidad.ToString();
+            lblTotalStock.Text = "$ " + archivo.Total.ToString();
+
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog guardar = new SaveFileDialog();
+            guardar.Filter = "Archivos CSV|*.csv";
+            guardar.FileName = "ARTICULOS.csv";
+
+            DialogResult respuesta;
+
+            respuesta = guardar.ShowDialog();
+
+            if (respuesta == DialogResult.OK)
             {
-                cmbArticulos.Items.Add(linea);
-                linea = archivo.ReadLine();
-            }
-            archivo.Close();
+                Clsarchivo archivo = new Clsarchivo();
+                archivo.Exportar(cmbRubros.Text, guardar.FileName);
 
-            cmbArticulos.SelectedIndex = 1;
+                MessageBox.Show("El archivo se exporto correctamente.");
+            }
+        }
+
+        private void linkTrabajoEvaluativo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmDatos ventana = new FrmDatos();
+            ventana.ShowDialog();
+
         }
     }
 
